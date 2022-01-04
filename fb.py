@@ -9,10 +9,10 @@ def ocean_view(arr_heights):
     if len(arr_heights) == 0:
         return None
 
-    # loop backwards through string, starting at the second last element.
+    # loop backwards through array of heights, starting at the second last element.
     for i in range(len(arr_heights) - 2, -1, -1):
-        # if an element has a greater neighbour on the right hand side, it can't see the ocean.
-        # all of the houses on the RHS of this elementcan see the ocean then.
+        # if an element has a greater neighbour on the right hand side (RHS), it can't see the ocean.
+        # all of the houses on the RHS of the first element that can't see the ocean can see the ocean.
         if arr_heights[i] < arr_heights[i + 1]:
             break
 
