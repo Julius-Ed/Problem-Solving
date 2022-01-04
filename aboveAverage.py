@@ -32,7 +32,7 @@ def aboveAverageSubarrays(A):
             if (sub_array_sum / sub_array_length) > (rest_sum / rest_length):
                 results.append([i + 1, j + 1])
 
-        # in this iteration the sub-array gets narrower, elements must be subtracted and added accordingly.
+        # set accumulator variables back to initial values.
         sub_array_sum = 0
         sub_array_length = 0
 
