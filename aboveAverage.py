@@ -33,13 +33,18 @@ def aboveAverageSubarrays(A):
                 results.append([i + 1, j + 1])
 
         # in this iteration the sub-array gets narrower, elements must be subtracted and added accordingly.
-        sub_array_sum -= A[i]
-        sub_array_length -= 1
+        sub_array_sum = 0
+        sub_array_length = 0
 
-        rest_sum += 1
-        rest_length += 1
+        rest_sum = sum(A)
+        rest_length = len(A)
 
     return results
 
 
-print(aboveAverageSubarrays([3, 4, 2]))
+print(aboveAverageSubarrays([3,4,2])==[[1, 2], [1, 3], [2, 2]])
+print(aboveAverageSubarrays([2]) == [[1,1]])
+print(aboveAverageSubarrays([2,2,2,2])==[[1,4]])
+print(aboveAverageSubarrays([2,2,2,1])==[[1, 1], [1, 2], [1, 3], [1, 4], [2, 2], [2, 3], [3, 3]])
+print(aboveAverageSubarrays([3,4,2,5,6]) == [[1, 5], [2, 5], [3, 5], [4, 4], [4, 5], [5, 5]])
+print(aboveAverageSubarrays([1,4,2,10,20,30,50,60,5,1000000])==[[1, 10], [2, 10], [3, 10], [4, 10], [5, 10], [6, 10], [7, 10], [8, 10], [9, 10], [10, 10]])
