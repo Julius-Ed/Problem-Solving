@@ -1,11 +1,10 @@
 class TrieNode:
-    def _init_(self):
+    def __init__(self):
         self.children = {}
         self.is_end_of_word = False
 
-
 class Trie:
-    def _init_(self):
+    def __init__(self):
         self.root = TrieNode()
 
     # Time: O(m); Space: O(m) where m is the length of word
@@ -46,5 +45,6 @@ class Trie:
 obj = Trie()
 obj.insert('apple')
 obj.insert('application')
-# param_2 = obj.search(word)
-# param_3 = obj.startsWith(prefix)
+
+print(obj.search('apple'))
+print(obj.starts_with("app"))
