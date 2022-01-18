@@ -64,7 +64,6 @@ class Solution:
 
 
 Sol = Solution()
-Sol2 = Solution_alternative()
 
 matrix = [
     [1, 0, 2, 0],
