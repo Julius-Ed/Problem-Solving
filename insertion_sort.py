@@ -1,8 +1,7 @@
 
 def insertion_sort(arr):
-    n = len(arr)
 
-    for i in range(1, n):
+    for i in range(1, len(arr)):
         if arr[i] < arr[i-1]:
             for j in range(i, 0, -1):
                 if arr[j] < arr[j-1]:
