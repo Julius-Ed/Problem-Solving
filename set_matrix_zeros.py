@@ -59,22 +59,4 @@ class Solution:
         for row in range(len(matrix)):
             for column in range(len(matrix[row])):
                 if matrix[row][column] == "True":
-                    matrix[row][column] = 0    
-
-
-
-Sol = Solution()
-
-matrix = [
-    [1, 0, 2, 0],
-    [3, 4, 5, 2],
-    [1, 3, 1, 5]
-]
-
-
-# Sol.setZeroes(matrix)
-# print(matrix)
-
-
-Sol2.setZeroes(matrix)
-print(matrix)
+                    matrix[row][column] = 0
